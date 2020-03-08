@@ -22,7 +22,10 @@ def pdf_splitter(path, n):
 
 
 def main():
-    pdf_splitter('A17_FlightPlan.pdf', 5)
+    directory = r'/Users/heron/PDFS'
+    for entry in os.scandir(directory):
+        if entry.path.endswith(".pdf"):
+            pdf_splitter(entry.path, 5)
 
 
 if __name__ == '__main__':

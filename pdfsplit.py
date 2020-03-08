@@ -19,7 +19,7 @@ def pdf_splitter(path, n):
             p = page - 4
 
         # Output the file
-        output_filename = '{}_page_{}-{}.pdf'.format(
+        output_filename = 'Output/{}_page_{}-{}.pdf'.format(
             fname, p, page)
         if (page % n == 0 and page != 0) or page == (num_pages - 1):
             with open(output_filename, 'wb') as out:

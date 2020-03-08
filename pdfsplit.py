@@ -8,12 +8,13 @@ def pdf_splitter(path, n):
     fname = os.path.splitext(os.path.basename(path))[0]
     pdf = PdfFileReader(path)
     pdf_writer = PdfFileWriter()
+    num_pages = pdf.getNumPages()
 
     for page in range(pdf.getNumPages()):
         pdf_writer.addPage(pdf.getPage(page))
         output_filename = '{}_page_{}.pdf'.format(
             fname, page + 1)
-        if page % n == 0:
+        if page % n == 0 or page == num_pages:
             with open(output_filename, 'wb') as out:
                 pdf_writer.write(out)
             print('Created: {}'.format(output_filename))

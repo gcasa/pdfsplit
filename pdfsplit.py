@@ -23,5 +23,6 @@ def pdf_splitter(path, n):
 def main():
     pdf_splitter('A17_FlightPlan.pdf', 5)
 
+
 if __name__ == '__main__':
     main()

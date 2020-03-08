@@ -18,4 +18,4 @@ def pdf_splitter(path):
 
 
 if __name__ == '__main__':
-    path = 'w9.pdf'
+    path = 'A17_FlightPlan.pdf'

@@ -1,4 +1,4 @@
-# pdf_splitter.py
+# pdfsplit.py
 import os
 
 from PyPDF2 import PdfFileReader, PdfFileWriter
